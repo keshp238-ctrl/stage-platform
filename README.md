@@ -1,8 +1,23 @@
 # STAGE — AI-Powered Speaking, Interview & Communication Platform
 
-> **"TED + Apple + Linear + Futuristic AI Startup"**  
-> A premium, interactive 3D speaking, interview and communication platform for students.  
+> **"TED + Apple + Linear + Futuristic AI Startup"**
+> A premium, interactive 3D speaking, interview and communication platform for students.
 > **LEARN → PRACTICE → SPEAK → CONNECT → GET HIRED**
+
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-keshp238--ctrl.github.io-E62B1E?style=for-the-badge&logo=github)](https://keshp238-ctrl.github.io/stage-platform/)
+[![React](https://img.shields.io/badge/React-18-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://react.dev/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.6-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Vite](https://img.shields.io/badge/Vite-5-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev/)
+[![Three.js](https://img.shields.io/badge/Three.js-WebGL-000000?style=for-the-badge&logo=threedotio)](https://threejs.org/)
+[![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](#-license)
+
+---
+
+## 🔴 Live Demo
+
+**→ [https://keshp238-ctrl.github.io/stage-platform/](https://keshp238-ctrl.github.io/stage-platform/)**
+
+Just open the link — no install, no build step. Works on desktop and mobile.
 
 ---
 
@@ -57,11 +72,34 @@
 
 ## 🛠️ Tech Stack
 
-- **Framework:** React 18, TypeScript, Vite
-- **Styling:** Tailwind CSS, PostCSS, Glassmorphism, CSS Variables
-- **3D & Graphics:** Three.js, React Three Fiber, @react-three/drei
-- **Icons & Motion:** Lucide-React, Framer-Motion, Canvas-Confetti
-- **Audio:** Web Audio API (AnalyserNode, MediaStreamSource)
+| Layer | Technologies |
+|---|---|
+| **Framework** | React 18, TypeScript, Vite |
+| **Styling** | Tailwind CSS, PostCSS, Glassmorphism, CSS Variables |
+| **3D & Graphics** | Three.js, React Three Fiber, @react-three/drei |
+| **Icons & Motion** | Lucide-React, Framer-Motion, Canvas-Confetti |
+| **Audio** | Web Audio API (AnalyserNode, MediaStreamSource) |
+
+---
+
+## 📁 Project Structure
+
+```
+stage-platform/
+├── src/
+│   ├── components/
+│   │   ├── 3d/           # Three.js scenes (Voice Stage, DNA Helix, Podiums)
+│   │   ├── app/          # Logged-in student dashboard views (14 views)
+│   │   ├── landing/      # Marketing landing page sections
+│   │   └── ui/           # Shared UI (Navbar, Modals, Cursor, Loader)
+│   ├── data/             # Mock data & fixtures
+│   ├── types/            # Shared TypeScript types
+│   ├── App.tsx           # Root — switches landing ↔ app views
+│   └── main.tsx          # Entry point
+├── index.html            # HTML shell (source)
+├── vite.config.ts        # Vite + GitHub Pages base path
+└── tailwind.config.js    # Design tokens
+```
 
 ---
 
@@ -69,21 +107,38 @@
 
 ```bash
 # Clone the repository
-git clone https://github.com/<your-username>/stage-platform.git
+git clone https://github.com/keshp238-ctrl/stage-platform.git
 
 # Navigate to project
 cd stage-platform
 
-# Install dependencies (use npm.cmd if in Windows PowerShell)
+# Install dependencies
+# (on Windows PowerShell, use npm.cmd if npm is blocked by execution policy)
 npm install
 
-# Start development server
+# Start development server → http://localhost:3000
 npm run dev
 
 # Build for production
 npm run build
 npm run preview
 ```
+
+---
+
+## 📦 Deployment
+
+The live site is served by **GitHub Pages** from the `gh-pages` branch.
+
+```bash
+# Build with the correct base path (already set in vite.config.ts)
+npm run build
+
+# The compiled site lands in dist/ — push it to gh-pages to go live
+```
+
+The base path `base: '/stage-platform/'` in `vite.config.ts` is required for
+GitHub Pages to resolve asset URLs correctly. Remove it if you self-host at the domain root.
 
 ---
 
